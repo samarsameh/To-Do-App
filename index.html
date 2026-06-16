@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <head> 
+        <h1>What's up,
+            <input 
+            type="text"
+            placeholder="name here"/>
+        </h1>
+        <input 
+        type="text"
+        placeholder="Task Name..."
+        />
+    </head>
+    <body> 
+        <form>
+            <h2>Create To-Do</h2>
+            <fieldset>
+                <legend>What's on your to do?</legend>
+                <input type="text" placeholder="e.g. study lesson">
+                <input type="text" placeholder="Task description">
+                <input type="file" accept="image/*" name="user image">
+            </fieldset>
+            <fieldset>
+                <legend>To-Do Priority</legend>
+                <label>
+                    <input type="radio" name="priority" value="low">
+                    Low
+                </label>
+                <label>
+                    <input type="radio" name="priority" value="Medium">
+                    medium
+                </label>
+                <label>
+                    <input type="radio" name="priority" value="Hard">
+                    hard
+                </label>
+            </fieldset>
+            <button type="submit">ADD TODO</button>
+        </form>
+        <section id="todo-lists">
+            <h3>todo lists</h3>
+            <div id="hold">
+                <h4>To Do</h4>
+                <div class="todo">
+                    <img src="path/to/image.jpg" alt="Task Image">
+                    <input type="checkbox">
+                    <p>task</p>
+                    <p>Task Description</p>
+                    <span>Priority: High</span>
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+            <div id="inprogress">
+                <h4>In Progress</h4>
+            </div>
+            <div id="done">
+                <h4>Done</h4>
+            </div>
+        </section>
+    </body>
+</body>
+</html>
