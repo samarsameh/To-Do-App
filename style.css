@@ -5,3 +5,120 @@
     box-sizing: border-box;
     font-family: 'montserrat', sans-serif;
 }
+
+:root{
+    --primary: #EA40A4;
+    --light: #EEE;
+    --dark-font:  #313154;
+    --grey-font:  #888;
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+body{
+    background-color: var(--light);
+    color: var(--dark-font);
+    padding: 2rem 1.5rem;
+}
+
+#greeting{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    gap: 1rem;
+    width: 100%;
+} 
+
+h2{
+    width: 50%;
+}
+
+.name-input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--dark-font);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 50%;
+    color: var(--grey-font);
+}
+
+.search-part {
+    position: relative;
+}
+
+.search-part input[type="text"] {
+    border: none;
+    outline: none;
+	font-size: 1rem;
+	padding: 0.5rem 2.5rem 0.5rem 1rem;
+	color: var(--dark);
+	background-color: #FFF;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+}
+
+.search-part .icon {
+    position: absolute;
+    right: 1rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--grey);
+    pointer-events: none;
+}
+
+#todo-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+#todo-form h2{
+    color: var(--dark-font);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.todo-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    border: none;
+}
+
+.todo-details h3 {
+    grid-column: span 2;
+    color: var(--grey-font);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.todo-input {
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    padding: 0.8rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.image-label input[type="file"] {
+    display: none;
+}
+
+.image-label {
+    grid-column: span 2;
+    background-color: #FFF;
+    padding: 0.8rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    color: var(--grey-font);
+}
