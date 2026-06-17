@@ -26,9 +26,9 @@
     </header>
     <main>
       <form action="#" id="todo-form">
-        <h2>Create a to-do</h2>
+        <h3>Create a to-do</h3>
         <div class="todo-details">
-          <h3>What's on your to do?</h3>
+          <h4>What's on your to do?</h4>
           <input
             class="todo-input"
             type="text"
@@ -49,42 +49,64 @@
             />
           </label>
         </div>
-        <div class="priority">
-          <h3>To-Do Priority</h3>
-          <label>
+        <div class="todo-priority">
+          <h4>To-Do Priority</h4>
+          <label class="priority">
             <input type="radio" name="priority" value="low" />
+            <span class="bubble low"></span>
             Low
           </label>
-          <label>
+          <label class="priority">
             <input type="radio" name="priority" value="Medium" />
+            <span class="bubble medium"></span>
             medium
           </label>
-          <label>
+          <label class="priority">
             <input type="radio" name="priority" value="Hard" />
+            <span class="bubble hard"></span>
             hard
           </label>
         </div>
-        <button type="submit">ADD TODO</button>
+        <button class="submit" type="submit">ADD TODO</button>
       </form>
       <section id="todo-lists">
         <h3>todo lists</h3>
-        <div id="hold">
-          <h4>To Do</h4>
-          <div class="todo">
-            <img src="path/to/image.jpg" alt="Task Image" />
-            <input type="checkbox" />
-            <p>task</p>
-            <p>Task Description</p>
-            <span>Priority: High</span>
-            <button>edit</button>
-            <button>delete</button>
+        <div class="tasks-cards">
+          <div id="hold">
+            <div class="status">
+              <h4>To do</h4>
+              <p>1</p>
+            </div>
+            <div class="todo" draggable="true">
+              <img src="path/to/image.jpg" alt="Task Image" />
+              <div class="todo-content">
+                <div class="todo-header">
+                  <p>task</p>
+                  <input type="checkbox" />
+                </div>
+                <p>Task Description</p>
+                <div class="todo-footer">
+                  <span>High</span>
+                  <div class="todo-actions">
+                    <button><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button><i class="fa-regular fa-trash-can"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div id="inprogress">
-          <h4>In Progress</h4>
-        </div>
-        <div id="done">
-          <h4>Done</h4>
+          <div id="inprogress">
+            <div class="status">
+              <h4>In Progress</h4>
+              <p>1</p>
+            </div>
+          </div>
+          <div id="done">
+            <div class="status">
+              <h4>Done</h4>
+              <p>1</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
