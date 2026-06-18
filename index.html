@@ -29,15 +29,12 @@
         <h3>Create a to-do</h3>
         <div class="todo-details">
           <h4>What's on your to do?</h4>
+          <input class="todo-input name" type="text" placeholder="Task name" required />
           <input
-            class="todo-input"
-            type="text"
-            placeholder="e.g. study lesson"
-          />
-          <input
-            class="todo-input"
+            class="todo-input description"
             type="text"
             placeholder="Task description"
+            required
           />
           <label for="imageInput" class="image-label">
             Drop a Photo
@@ -52,17 +49,17 @@
         <div class="todo-priority">
           <h4>To-Do Priority</h4>
           <label class="priority">
-            <input type="radio" name="priority" value="low" />
+            <input type="radio" name="priority" value="low" required />
             <span class="bubble low"></span>
             Low
           </label>
           <label class="priority">
-            <input type="radio" name="priority" value="Medium" />
+            <input type="radio" name="priority" value="Medium" required />
             <span class="bubble medium"></span>
-            medium
+            Medium
           </label>
           <label class="priority">
-            <input type="radio" name="priority" value="Hard" />
+            <input type="radio" name="priority" value="Hard" required />
             <span class="bubble hard"></span>
             hard
           </label>
@@ -72,43 +69,50 @@
       <section id="todo-lists">
         <h3>todo lists</h3>
         <div class="tasks-cards">
-          <div id="hold">
+          <div id="hold" class="card">
             <div class="status">
-              <h4>To do</h4>
-              <p>1</p>
+              <h4>Hold</h4>
+              <p id="numTodo">1</p>
             </div>
-            <div class="todo" draggable="true">
-              <img src="path/to/image.jpg" alt="Task Image" />
-              <div class="todo-content">
-                <div class="todo-header">
-                  <p>task</p>
-                  <input type="checkbox" />
-                </div>
-                <p>Task Description</p>
-                <div class="todo-footer">
-                  <span>High</span>
-                  <div class="todo-actions">
-                    <button><i class="fa-regular fa-pen-to-square"></i></button>
-                    <button><i class="fa-regular fa-trash-can"></i></button>
+            <div class="todos">
+              <div class="todo done" draggable="true">
+                <img src="" alt="Task Image" />
+                <div class="todo-content">
+                  <div class="todo-header">
+                    <p>task</p >
+                    <input type="checkbox" />
+                  </div>
+                  <p>Task Description</p>
+                  <div class="todo-footer">
+                    <span class="high">High</span>
+                    <div class="todo-actions">
+                      <button>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                      </button>
+                      <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="inprogress">
+          <div id="inprogress" class="card">
             <div class="status">
               <h4>In Progress</h4>
-              <p>1</p>
+              <p id="numTodo">1</p>
             </div>
+            <div class="todos"></div>
           </div>
-          <div id="done">
+          <div id="done" class="card">
             <div class="status">
               <h4>Done</h4>
-              <p>1</p>
+              <p id="numTodo">1</p>
             </div>
+            <div class="todos"></div>
           </div>
         </div>
       </section>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>

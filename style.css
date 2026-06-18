@@ -238,7 +238,7 @@ h4 {
     column-gap: 0.5rem;
 }
 
-#hold {
+.card {
     background-color: var(--white);
     box-shadow: var(--shadow);
     border-radius: 0.5rem;
@@ -254,7 +254,7 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
-.status p{
+#numTodo {
     font-size: 1rem;
     font-weight: 700;
     color: var(--grey-font);
@@ -348,6 +348,17 @@ h4 {
     color: var(--medium);
 }
 
+.todo-footer span.low {
+    background-color: var(--low-background);
+    color: var(--low);
+    box-shadow: var(--low-glow);
+}
+
+.todo-footer span.hard {
+    background-color: var(--hard-background);
+    color: var(--hard);
+    box-shadow: var(--hard-glow);
+}
 
 .todo-actions {
     display: flex;
@@ -367,4 +378,9 @@ h4 {
     box-shadow: var(--primary-shadow);
     padding: 0.1rem;
     border-radius: 0.5rem;
+}
+
+.todo.done {
+    text-decoration: line-through;
+    opacity: 0.6;
 }
