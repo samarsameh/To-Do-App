@@ -119,6 +119,7 @@ h4 {
     box-shadow: var(--shadow);
     border-radius: 0.5rem;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .image-label input[type="file"] {
@@ -156,6 +157,8 @@ h4 {
     border-radius: 0.5rem;
     padding: 1rem;
     gap: 0.5rem;
+    transition: 0.3s ease-in-out;
+    cursor:pointer;
 }
 
 .bubble {
@@ -254,7 +257,7 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
-#numTodo {
+.numTodo {
     font-size: 1rem;
     font-weight: 700;
     color: var(--grey-font);
@@ -383,4 +386,12 @@ h4 {
 .todo.done {
     text-decoration: line-through;
     opacity: 0.6;
+}
+
+.todo.dragging {
+    opacity: 0.6;
+}
+
+.todo-input:hover, button:hover, .priority:hover {
+    transform: translateY(-5px);
 }
