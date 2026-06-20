@@ -14,7 +14,7 @@
     <title>TO-DO LIST</title>
   </head>
   <body>
-    <header id="greeting">
+    <header id="greeting" class="flex-between">
       <h2>
         What's up,
         <input class="name-input" type="text" placeholder="name here" />
@@ -25,7 +25,7 @@
       </div>
     </header>
     <main>
-      <form action="#" id="todo-form">
+      <form action="#" id="todo-form" class="flex-between">
         <h3>Create a to-do</h3>
         <div class="todo-details">
           <h4>What's on your to do?</h4>
@@ -48,17 +48,17 @@
         </div>
         <div class="todo-priority">
           <h4>To-Do Priority</h4>
-          <label class="priority">
+          <label class="priority flex-between">
             <input type="radio" name="priority" value="low" required />
             <span class="bubble low"></span>
             Low
           </label>
-          <label class="priority">
+          <label class="priority flex-between">
             <input type="radio" name="priority" value="Medium" required />
-            <span class="bubble medium"></span>
+            <span class="bubble medium flex-between"></span>
             Medium
           </label>
-          <label class="priority">
+          <label class="priority flex-between">
             <input type="radio" name="priority" value="Hard" required />
             <span class="bubble hard"></span>
             hard
@@ -70,7 +70,7 @@
         <h3>todo lists</h3>
         <div class="tasks-cards">
           <div class="card">
-            <div class="status">
+            <div class="status flex-between">
               <h4>Hold</h4>
               <p class="numTodo">1</p>
             </div>
@@ -97,14 +97,14 @@
             </div>
           </div>
           <div class="card">
-            <div class="status">
+            <div class="status flex-between">
               <h4>In Progress</h4>
               <p class="numTodo">1</p>
             </div>
             <div class="todos inprogress"></div>
           </div>
           <div class="card">
-            <div class="status">
+            <div class="status flex-between">
               <h4>Done</h4>
               <p class="numTodo">1</p>
             </div>
